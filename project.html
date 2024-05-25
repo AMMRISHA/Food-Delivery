@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tutorial</title>
+<link rel="stylesheet" type="text/css" href="pro1.css"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5b3502f261.js"
+crossorigin="anonymous"></script>
+	
+</head>
+<body>
+<!................navbar......................>
+<section class="header">
+    <nav>	
+		<p class="logo">navbar</p>
+		<i id="menu-icon" class="fas fa-bars" onclick="showmenu()"></i>
+<div class="links" id="navlinks">
+	<i id="icon" class="fas fa-times" onclick="hidemenu()"></i>
+<ul>
+  <li><i class="fas fa-home" style=" font-size:15px; color:white"></i><a href="home.html"> &nbsp;Home</a></li>
+  <li><a href="#news">about us</a></li>
+  <li><a href="#contact">feedback</a></li>
+  <li><a href="#about">contuct us</a></li>
+</ul>
+</div>
+  </nav>
+  </section>
+  <script>
+	var navlinks =document.getElementById("navlinks");
+	function showmenu(){
+		navlinks.style.right="0";
+	}
+	function hidemenu(){
+     navlinks.style.right="-200px";
+	}
+	</script>		
+</body>
+</html>  

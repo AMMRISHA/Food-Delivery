@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="try.css"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/5b3502f261.js"
+crossorigin="anonymous"></script>
+</head>
+<body>
+<section class="header">
+    <nav>	
+	   <img src="images/logo.png" style="width:30px; height:30px">
+		 <!-- search bar center align -->
+        <div class="search">
+            <form action="#">
+                <input type="text"
+                    placeholder=" Search items"
+                    name="search">
+                <button>
+                    <i class="fa fa-search"
+                        style="font-size: 18px;">
+                    </i>
+                </button>
+            </form>
+        </div>
+    </div>
+<div class="links" id="navlinks">
+<ul>
+  <li><i class="fas fa-home" style=" font-size:15px; color:"></i><a href="#"> &nbsp;Home</a></li>
+  <li><a href="login.php">login</a></li>
+  <li><a href="register.php">register</a></li>
+  <li><a href="logout.php">logout</a></li>
+</ul>
+</div>
+  </nav>
+</section>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images\foodad1.jpeg" style="width:100%; height:600px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images\foodad2.jpeg" style="width:100%; height:600px">
+</div>
+
+<div class="mySlides fade">
+  <img src="images\foodad4.jpeg" style="width:100%; height:600px">
+</div>
+
+</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<!.........feature section...............................>
+<section class="card_section"> 
+<p class="card_heading">Our Top Items </p>
+	<div class="wrapper">
+<div class="card">
+			<img src="images\pizza.jpeg">
+			<div class="info">
+				<h1>Pizza</h1>
+				<p>abc abc abc abc abc abc abc</p>
+			</div>
+ <a href="">view</a>
+		</div>
+<div class="card">
+			<img src="images\burger.jpeg">
+			<div class="info">
+				<h1>Burger</h1>
+				<p>abc abc abc abc abc abc abc</p>
+			</div>
+	        <a href="">view</a>
+		</div>
+<div class="card">
+			<img src="images\biriyani.jpeg">
+			<div class="info">
+				<h1>Desserts</h1>
+				<p>abc abc abc abc abc abc abc</p>
+			</div>
+	        <a href="">view</a>
+		</div>
+<div class="card">
+			<img src="images\dessert.jpeg">
+			<div class="info">
+				
+			</div>
+	        <a href="">view</a>
+		</div>					
+	</div>
+	</section>
+<!...............feature section end....................>
+<!...............resturants...................>
+	<section class="round_card"> 
+<p class="cardsheading"> Top Resturants and cafes </p>
+	
+	</section>
+<!........about section start...........>
+<section class="about" id="about">
+  <h1 class="heading">Populer Localities We Deliver To Around Kolkata </h1>
+  <div id="locality">
+  <div class="coll1">
+  <p>Rajarhat</p>
+  <p>New Town</p>
+  <p>Hlatu</p>
+  <p>Garia</p>
+  <p>Salt Lake City</p>
+  <p>BT Road</p>
+  <p>Behala</p>
+  <p>Dum Dum</p>
+  <p>Tollygunge</p>
+  </div>
+   <div class="coll2">
+  <p>Ballygunge</p>
+  <p>Kasba</p>
+  <p>Joka</p>
+  <p>Nrendrapur</p>
+  <p>Mukundapur</p>
+  <p>Jadavpur</p>
+  <p>New alipore</p>
+  <p>Sodepur</p>
+  <p>Baguihati</p>
+  </div>
+   <div class="coll3">
+  <p>Lake Town</p>
+  <p>Rajpur</p>
+  <p>Sonarpur</p>
+  <p>Patuli</p>
+  <p>Basdroni</p>
+  <p>Bhabanipur</p>
+  <p>Baghajatin</p>
+  <p>Thakur Pukur</p>
+  <p>Dhakuria</p>
+  </div>
+</section>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
+}
+</script>
+
+</body>
+</html> 

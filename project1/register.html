@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <title>PHP login System!</title>
+    <style>
+      body{
+        background:linear-gradient(to top ,rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6)50%),url(pizza.jpg);
+      }
+      h3{
+        margin: auto;
+        text-align: center;
+        padding-top: 150px;
+        padding-bottom: 40px;
+        font-size: 23px;
+        color: white;
+      }
+      .form-row{
+        color: white;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+      .form-row .form-group{
+        padding-top: 20px;
+      }
+      .form-row .form-group input{
+        margin-left: 15px;
+      }
+      .form-row .btn-primary{
+        margin:30px;
+        padding: 7px;
+        background-color:white;
+        border: 2px solid white;
+        font-size: 13px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+<h3>Please Register Here:</h3>
+
+<script>  
+function validateform(){  
+var name=document.myform.username.value;  
+var password=document.myform.password.value;  
+var conpassword=document.myform.confirm_password.value; 
+var number=document.myform.number.value; 
+  
+if (name==null || name==""){  
+  alert("Name can't be blank");  
+  return false;  
+}
+if (password==null || password==""){  
+  alert("password can't be blank");  
+  return false;
+  }
+else if( password.length<6){  
+  alert("password must be at least 6 characters long.");  
+  return false;  
+  }
+  if (password!==conpassword){
+  alert("password and confirm password are not same");
+  return false;
+  }
+  if(number.length<10 ||number.length>10 ){  
+  alert("phone no should be 10 digit");  
+  return false;  
+  }
+}  
+</script>  
+<body>  
+<form name="myform" action="register.php" method="post" onsubmit="return validateform()">
+  <div class="form-row">
+   <div class="form-group ">
+      Name<input type="text" class="form-control" name="username" id="inputEmail4" placeholder=" Enter Your Name">
+	 
+    </div>
+    <div class="form-group col-md-6">
+      
+      Password<input type="password" class="form-control" name ="password" id="inputPassword4" placeholder="at least 6 characters" value="">
+	  
+  </div>
+  <div class="form-group">
+      Confirm Password<input type="password" class="form-control" name ="confirm_password" id="inputPassword" placeholder="Confirm Password" value="">
+	  
+    </div>
+  <div class="form-group">
+    Phone no<input type="number" name="number" class="form-control" id="inputphone" placeholder="000000000">
+	
+  </div>
+  <input type="submit"value="submit" class=" btn-primary" ></input>
+  </div>
+</form>
+</body>
+</html>
